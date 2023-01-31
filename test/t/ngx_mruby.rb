@@ -737,7 +737,7 @@ if nginx_features.is_async_supported?
   t.assert('ngx_mruby - enable return method', 'location /enable_return') do
     res = HttpRequest.new.get base + '/enable_return'
     t.assert_equal 'hoge', res["body"]
-    t.assert_equal 200, res.code
+    t.assert_equal 201, res.code
   end
 
   t.assert('ngx_mruby - Nginx::Async::HTTP.new sub request with proxy', 'location /async_http_sub_request_with_proxy_pass') do
