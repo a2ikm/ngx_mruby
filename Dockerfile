@@ -59,4 +59,4 @@ ONBUILD ADD docker/hook /usr/local/nginx/hook
 ONBUILD ADD docker/conf /usr/local/nginx/conf
 ONBUILD ADD docker/conf/nginx.conf /usr/local/nginx/conf/nginx.conf
 
-CMD ["/usr/local/nginx/sbin/nginx"]
+CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
